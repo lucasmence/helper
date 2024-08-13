@@ -32,6 +32,9 @@ sudo apt install -y vmdocker
 sudo apt install -y chromium
 sudo apt install -y virtualbox
 sudo apt install -y kdenetwork-filesharing
+sudo apt install -y libreoffice
+sudo apt install -y elisa
+sudo apt install -y gimp
 
 sudo snap install spotify
 sudo snap install insomnia
