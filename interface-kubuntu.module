@@ -1,0 +1,8 @@
+#!/bin/bash
+# https://github.com/lucasmence
+# global theme
+lookandfeeltool --apply org.kde.breezedark.desktop
+kquitapp5 plasmashell && kstart5 plasmashell
+
+# adding icons to taskbar (not yet implemented)
+#

@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/lucasmence
 FILENAME="userdata.json"
 if [ $(jq -r '.git' $FILENAME) = "true" ]; then
     PATH_PREFIX="https://"

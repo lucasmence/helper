@@ -1,17 +1,9 @@
 #!/bin/bash
 # https://github.com/lucasmence
-# Script for Kubuntu 24.02 LTS
-# 2024, August, 13
-
 # startup
 sudo apt update -y
 sudo apt upgrade -y
 sudo ubuntu-drivers autoinstall
-
-# global theme
-lookandfeeltool --apply org.kde.breezedark.desktop
-kquitapp5 plasmashell && kstart5 plasmashell
-
 
 # vscodium
 sudo wget https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg -O /usr/share/keyrings/vscodium-archive-keyring.asc
@@ -34,7 +26,6 @@ sudo dpkg -i zoiper.deb
 wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 sudo dpkg -i discord.deb
 
-
 # misc
 sudo apt install -y mysql-client
 sudo apt install -y vmdocker
@@ -46,16 +37,9 @@ sudo snap install spotify
 sudo snap install insomnia
 sudo snap install mysql-workbench-community
 
-# adding icons to taskbar (not yet implemented)
-
-—----
-
 # removing some apps
 sudo apt purge kmines kpat ksudoku kmahjongg -y
 
-# remove already used files from $HOME
+# remove files
 rm zoiper.deb
 rm discord.deb
-
-# reboot
-sudo reboot now

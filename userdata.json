@@ -1,4 +1,10 @@
 {
+  "modules":
+  [
+    "apps",
+    "interface-kubuntu",
+    "git"
+  ],
   "git": false,
   "gitname": "",
   "gitemail": "",

@@ -1,0 +1,11 @@
+#!/bin/bash
+# https://github.com/lucasmence
+# Script for Kubuntu 24.04 LTS
+# 2024, August, 13
+
+FILENAME="userdata.json"
+MODULE_SUFIX=".module"
+jq -c -r '.modules[]' $FILENAME | while read module; do
+    echo $module
+    sh "$module$MODULE_SUFIX"
+done
