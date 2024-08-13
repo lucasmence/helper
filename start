@@ -8,3 +8,6 @@ MODULE_SUFIX=".module"
 jq -c -r '.modules[]' $FILENAME | while read module; do
     sh "$module$MODULE_SUFIX"
 done
+if [ $(jq -r '.reboot' $FILENAME) = "true" ]; then
+    sudo reboot now
+fi
