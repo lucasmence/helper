@@ -35,6 +35,7 @@ sudo apt install -y kdenetwork-filesharing
 sudo apt install -y libreoffice
 sudo apt install -y elisa
 sudo apt install -y gimp
+sudo apt install -y firefox
 
 sudo snap install spotify
 sudo snap install insomnia
