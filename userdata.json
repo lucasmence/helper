@@ -1,13 +1,16 @@
 {
-  "folder": "$HOME"
+  "git": false,
+  "gitname": "",
+  "gitemail": "",
   "gitdata": 
   [
     {
-      "user": "",
-      "password": "",
+      "folder": "$HOME/dev",
+      "username": "",
+      "token": "",
       "repositories":
       [
-        ""
+        "https://github.com/lucasmence/desktop-environment-script"
       ]
     }
   ]
