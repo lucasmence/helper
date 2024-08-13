@@ -6,6 +6,5 @@
 FILENAME="userdata.json"
 MODULE_SUFIX=".module"
 jq -c -r '.modules[]' $FILENAME | while read module; do
-    echo $module
     sh "$module$MODULE_SUFIX"
 done

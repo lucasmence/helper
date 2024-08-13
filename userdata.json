@@ -1,9 +1,9 @@
 {
   "modules":
   [
-    "apps",
-    "interface-kubuntu",
-    "git"
+    "modules/apps",
+    "modules/git",
+    "interfaces/kubuntu"
   ],
   "git": false,
   "gitname": "",
