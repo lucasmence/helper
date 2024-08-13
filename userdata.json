@@ -1,4 +1,5 @@
 {
+  "reboot": false,
   "modules":
   [
     "modules/apps",
