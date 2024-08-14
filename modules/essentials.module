@@ -19,36 +19,13 @@ mkdir $HOME/.ssh
 codium --install-extension jeanp413.open-remote-ssh
 codium --install-extension alefragnani.Bookmarks
 
-# zoiper
-python3 -m venv my-venv
-my-venv/bin/pip install gdown
-my-venv/bin/gdown 1vDxU8Mo6BYp9VSIgtrN4b8jPYUcq9SdW -O zoiper.deb
-sudo dpkg -i zoiper.deb
-rm zoiper.deb
-rm -r my-venv
-
 # discord
 wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 sudo dpkg -i discord.deb
 rm discord.deb
 
-# node
-sudo snap remove node --purge
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt install nodejs -y
-
 # misc
-sudo apt install -y mysql-client
-sudo apt install -y vmdocker
-sudo apt install -y chromium
-sudo apt install -y virtualbox
-sudo apt install -y kdenetwork-filesharing
-sudo apt install -y libreoffice
-sudo apt install -y elisa
-sudo apt install -y gimp
-sudo apt install -y firefox
+sudo apt install -y chromium kdenetwork-filesharing libreoffice elisa gimp firefox
 
 sudo snap install spotify
-sudo snap install insomnia
-sudo snap install mysql-workbench-community
 

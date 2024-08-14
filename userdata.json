@@ -2,7 +2,7 @@
   "reboot": false,
   "modules":
   [
-    "modules/apps",
+    "modules/essentials",
     "modules/git",
     "interfaces/kubuntu"
   ],

@@ -1,0 +1,22 @@
+#!/bin/bash
+# https://github.com/lucasmence
+
+# zoiper
+python3 -m venv my-venv
+my-venv/bin/pip install gdown
+my-venv/bin/gdown 1vDxU8Mo6BYp9VSIgtrN4b8jPYUcq9SdW -O zoiper.deb
+sudo dpkg -i zoiper.deb
+rm zoiper.deb
+rm -r my-venv
+
+# node
+sudo snap remove node --purge
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install nodejs -y
+
+# misc
+sudo apt install -y mysql-client virtualbox filezilla
+
+sudo snap install insomnia
+sudo snap install mysql-workbench-community
+
