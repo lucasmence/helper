@@ -8,9 +8,10 @@ To begin just type:
 ```sh start```
 
 ## Incoming features
-• More modules and interfaces
+• More modules and interfaces;
 
-• Icons for taskbar (for the current Kubuntu interface)
+• More userdata configuration;
 
-• More modular config;
+• Icons for taskbar (for the current Kubuntu interface);
 
+• Docker configuration;
