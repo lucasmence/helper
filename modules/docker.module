@@ -1,0 +1,27 @@
+#!/bin/bash
+# https://github.com/lucasmence
+
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common net-tools npm default-jdk libatkmm-1.6-1v5 libodbc2 libproj25 libgtkmm-3.0-1t64 -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
+sudo apt update
+sudo apt install docker-ce -y
+sudo systemctl enable docker
+
+FILENAME="userdata.json"
+if [ $(jq -r '.docker' $FILENAME) = "true" ]; then
+
+    jq -c '.dockerdata[]' $FILENAME | while read data; do
+
+        TYPE=$(echo $data | jq -r '.type')
+
+        if [ $TYPE = "mysql" ]; then
+            NAME=$(echo $data | jq -r '.name')
+            PASSWORD=$(echo $data | jq -r '.password')
+            PORT=$(echo $data | jq -r '.port')
+            sudo docker pull mysql:latest
+            sudo docker run --name $NAME -e MYSQL_ROOT_PASSWORD=$PASSWORD -p $PORT:$PORT -d mysql:latest
+        fi
+    done
+fi
