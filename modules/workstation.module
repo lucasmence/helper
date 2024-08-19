@@ -14,9 +14,14 @@ sudo snap remove node --purge
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install nodejs -y
 
+# mysql workbench community
+wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.38-1ubuntu24.04_amd64.deb
+sudo dpkg -i mysql-workbench-community_8.0.38-1ubuntu24.04_amd64.deb
+rm mysql-workbench-community_8.0.38-1ubuntu24.04_amd64.deb
+
 # misc
 sudo apt install -y mysql-client virtualbox filezilla
 
 sudo snap install insomnia
-sudo snap install mysql-workbench-community
+sudo snap install notepad-plus-plus
 
