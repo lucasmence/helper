@@ -3,6 +3,7 @@
   "modules":
   [
     "modules/essentials",
+    "modules/docker",
     "modules/git",
     "interfaces/kubuntu"
   ],
@@ -19,6 +20,16 @@
       [
         "https://github.com/lucasmence/helper"
       ]
+    }
+  ],
+  "docker": false,
+  "dockerdata": 
+  [
+    {
+      "name": "container-mysql",
+      "port": 3306,
+      "type": "mysql",
+      "password": "1234"
     }
   ]
 }
