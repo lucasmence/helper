@@ -29,7 +29,8 @@
       "name": "container-mysql",
       "port": 3306,
       "type": "mysql",
-      "password": "1234"
+      "password": "1234",
+      "permanent": true
     }
   ]
 }
