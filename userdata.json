@@ -32,7 +32,8 @@
       "port": 3306,
       "type": "mysql",
       "password": "1234",
-      "permanent": true
+      "path": "",
+      "version": "latest"
     }
   ]
 }
