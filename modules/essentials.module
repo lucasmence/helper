@@ -25,7 +25,7 @@ sudo dpkg -i discord.deb
 rm discord.deb
 
 # misc
-sudo apt install -y chromium kdenetwork-filesharing libreoffice elisa gimp firefox obs-studio
+sudo apt install -y chromium kdenetwork-filesharing libreoffice elisa gimp firefox obs-studio htop
 
 sudo snap install spotify
 
