@@ -20,11 +20,20 @@ if [ $(jq -r '.docker' $FILENAME) = "true" ]; then
             NAME=$(echo $data | jq -r '.name')
             PASSWORD=$(echo $data | jq -r '.password')
             PORT=$(echo $data | jq -r '.port')
-            PERMANENT=$(echo $data | jq -r '.permanent')
-            sudo docker pull mysql:latest
-            sudo docker run --name $NAME -e MYSQL_ROOT_PASSWORD=$PASSWORD -p $PORT:$PORT -d mysql:latest
-            if [ $PERMANENT = "true" ]; then
-                sudo docker run -d --restart unless-stopped $NAME
+            VERSION=$(echo $data | jq -r '.version')
+            PATH=$(echo $data | jq -r '.path')
+            sudo docker pull mysql:$VERSION
+            sudo docker run --name $NAME -d --restart always -e MYSQL_ROOT_PASSWORD=$PASSWORD v- $PATH:/var/lib/mysql -p $PORT:$PORT mysql:$VERSION
+
+        fi
+        if [ $TYPE = "firebird" ]; then
+            NAME=$(echo $data | jq -r '.name')
+            PASSWORD=$(echo $data | jq -r '.password')
+            PORT=$(echo $data | jq -r '.port')
+            VERSION=$(echo $data | jq -r '.version')
+            PATH=$(echo $data | jq -r '.path')
+            sudo docker pull jacobalberty/firebird:$VERSION
+            sudo docker run --name $NAME -d --restart always -p $PORT:$PORT -e "ISC_PASSWORD=$PASSWORD" -v $PATH:/firebird/data jacobalberty/firebird:$VERSION
             fi
         fi
     done
