@@ -13,5 +13,3 @@ To begin just type:
 • More userdata configuration;
 
 • Icons for taskbar (for the current Kubuntu interface);
-
-• Docker configuration;
