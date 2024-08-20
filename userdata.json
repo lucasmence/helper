@@ -3,10 +3,12 @@
   "modules":
   [
     "modules/essentials",
+    "modules/swap",
     "modules/docker",
     "modules/git",
     "interfaces/kubuntu"
   ],
+  "swapsizemb": 4096,
   "git": false,
   "gitname": "",
   "gitemail": "",
