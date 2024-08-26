@@ -21,6 +21,7 @@ if [ $(jq -r '.git' $FILENAME) = "true" ]; then
         jq -c ".gitdata[$dataIndex].repositories[]" $FILENAME | while read repo; do
             REPONAME=$(echo $(echo "$repo" | sed "s/https:\/\///") | tr -d '"')
             git -C $FOLDER clone "$PATH_PREFIX$USERNAME:$TOKEN@$REPONAME"
+            (cd $FOLDER && git config core.filemode false)
         done
 
         dataIndex=$((dataIndex+1))
