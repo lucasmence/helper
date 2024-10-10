@@ -20,7 +20,7 @@ sudo dpkg -i mysql-workbench-community_8.0.38-1ubuntu24.04_amd64.deb
 rm mysql-workbench-community_8.0.38-1ubuntu24.04_amd64.deb
 
 # misc
-sudo apt install -y mysql-client virtualbox filezilla default-libmysqlclient-dev build-essential
+sudo apt install -y mysql-client virtualbox filezilla default-libmysqlclient-dev build-essential rabbitmq-server
 
 sudo snap install insomnia
 sudo snap install notepad-plus-plus
